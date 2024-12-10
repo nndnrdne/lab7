@@ -1,0 +1,104 @@
+
+            
+
+
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дасгал ажил</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 800px;
+            background-color: white;
+            border: 1px solid #ccc;
+        }
+        .header {
+            display: flex;
+            background-color: #87CEEB;
+            padding: 10px;
+        }
+        .header button {
+            flex: 1;
+            padding: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .footer {
+            background-color: #FFA07A;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }
+    </style>
+
+    <script>
+
+        function loadContent(page) {
+            let content = document.getElementById('content');
+            if (page === 'home') {
+                content.innerHTML = `
+                
+                    <h2>Нүүр хуудас</h2>
+                    <p>Энэ бол таны үндсэн нүүр хуудасны агуулга юм.</p>
+                `;
+            } else if (page === 'gallery') {
+                content.innerHTML = `
+                    <h2>Зурагнууд</h2>
+                    <img src="https://bouqs.com/blog/wp-content/uploads/2023/08/lilly-8094912_1280-min-1080x720.png" alt="Зураг 1" style="width:200px;">
+                    <img src="https://wallpapers.com/images/featured/flower-pictures-unpxbv1q9kxyqr1d.jpg" alt="Зураг 2" style="width:200px;">
+                `;
+            } else if (page === 'videos') {
+                content.innerHTML = `
+                    <h2>Бичлэгүүд</h2>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/LexRXcUsJGo?si=QjGBaO7qUtvp8nWP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                `;
+            } else if (page === 'map') {
+                content.innerHTML = `
+                    <h2>Газрын зураг</h2>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2673.934712813537!2d106.93231949999999!3d47.9183007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d9693e4a5ab10fd%3A0x33486d5a79f700bb!2sOrchlon%20Complex!5e0!3m2!1sen!2smn!4v1731383677142!5m2!1sen!2smn" width="600" height="450" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                `;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Толгой хэсэг -->
+        <div class="header">
+            <button onclick="loadContent('home')">Нүүр хуудас</button>
+            <button onclick="loadContent('gallery')">Зурагнууд</button>
+            <button onclick="loadContent('videos')">Бичлэгүүд</button>
+            <button onclick="loadContent('map')">Газрын зураг</button>
+        </div>
+        <div style="height: 400px; width: 400px; background-color: black;">
+            <img src="" alt="">
+        </div>
+        <!-- Агуулга хэсэг -->
+        <div class="content" id="content">
+            <h2>Нүүр хуудасны агуулга энд гарна.</h2>
+            <p>Энд өөрийн тухай мэдээлэл оруулах хэсэг байна.</p>
+        </div>
+        <a href="" target="iframe1"></a>
+        <iframe src="" frameborder="0" name="iframe1"></iframe>
+        <!-- Хөл хэсэг -->
+        <div class="footer">
+            <p>Гэрийн хаяг эсвэл сургуулийн хаяг</p>
+        </div>
+    </div>
+</body>
+</html>
